@@ -6,12 +6,10 @@ One function per operation, in order.
 """
 # First example
 import math
-def add(a, b):
-    return a+b
+
 def sub(a,b):
     return a-b
-def mul(a,b):
-    return a*b
+
 def div(a,b):
     try:
         if a == 0:
@@ -19,13 +17,7 @@ def div(a,b):
         return b/a
     except ZeroDivisionError:
         return ("Error: Division by Zero")
-def log(a,b):
-    try:
-        if b == 0:
-            raise ValueError
-        return math.log(a, b)
-    except ValueError:
-        return ("Error: Logarithm of 0")
+
 def exp(a,b):
     return a**b
 
@@ -43,9 +35,6 @@ def hypotenuse(a, b):
 def add(a, b):
     return a + b
 
-def subtract(a, b):
-    return a-b
-
 def multiply(a, b):
     return a * b
 
@@ -54,8 +43,7 @@ def logarithm(a, b):
         raise ValueError("Error: Logarithm of 0")
     return math.log(b, a)
 
-def exponent(a, b):
-    return a ** b
+
 
 
 
