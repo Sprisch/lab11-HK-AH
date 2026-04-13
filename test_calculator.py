@@ -11,11 +11,15 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(multiply(2,3), 6)
+        self.assertEqual(multiply(-4,5),-20)
+        self.assertEqual(multiply(0, 10), 0)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
+    def test_divide(self): # 3 assertions
+        self.assertEqual(div(10, 2), 5)
+        self.assertEqual(div(20, 10), 2)
+        self.assertEqual(div(5, 2), 2.5)
     # ##########################
 
     ######## Partner 2
@@ -34,22 +38,29 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self): # 1 assertion
+        # call log function inside, example:
+        # with self.assertRaises(<INSERT_ERROR_TYPE>):
+        #     logarithm(0, 5)
+        with self.assertRaises(ValueError):
+            logarithm(0, 5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
-    ##########################
+    def test_hypotenuse(self): # 3 assertions
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertEqual(hypotenuse(5, 12), 13)
+
+
+
+    def test_sqrt(self): # 3 assertions
+        # Test for invalid argument, example:
+        # with self.assertRaises(<INSERT_ERROR_TYPE>):
+        #    square_root(NUM)
+        # Test basic function
+        with self.assertRaises(ValueError):
+            square_root(-4)
+
+        self.assertEqual(square_root(25), 5)
 
 # Do not touch this
 if __name__ == "__main__":
